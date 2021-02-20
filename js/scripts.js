@@ -174,6 +174,7 @@ let cocktailRepository = (function () {
 
 cocktailRepository.loadCategoryList().then(function () {
   // Now the data is loaded!
+
   console.log('Data loaded! now getAll()');
   cocktailRepository.getAll().forEach(function (category) {
     cocktailRepository.addCategoryListItem(category);
