@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --dark-grey: #2b2b2b;
+  --primary-background-color: LavenderBlush;
+  --color1: #ffdce7;
+  --color2: #ffe1eb;
+  --secondary-background-color: Linen;
+  --primary-accent-color: Rosybrown;
+  --selected-link-color: #489c79;
+  --visited-color: #05676e;
+  --font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  background-color: var(--primary-background-color);
+  line-height: normal;
+}
+
+h3 {
+  display: inline-block;
+}
+
+.drink-button,
+button {
+  border: none;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: var(--secondary-background-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.4s opacity;
+}
+
+button:hover,
+button:focus,
+.drink-button:hover,
+.drink-button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.cocktail-categories {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cocktail-categories button {
+  width: 300px;
+  height: 50px;
+  font-size: larger;
+}
+
+.cocktail-drinks__buttons {
+  list-style: none;
+}
+
+.cocktail-drinks,
+.cocktail-details {
+  float: left;
+}
+
+.cocktail-details {
+  width: 70%;
+}
+
+#modal-container {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  /* to show it above other content */
+  z-index: 999;
+
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+
+  /* this is used to center the modal */
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+.modal__image {
+  width: 400px;
+}
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container - add your own desired CSS styles here */
+  display: block;
+}
